@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
@@ -12,7 +12,7 @@
 <body>
     <div class="conteiner p-5" id="app">
         <div class="header">
-            <h1>{{message}}</h1>
+            <h1>{{}}</h1>
         </div>
         <div class="row">
             <div class="col-md-4">
@@ -34,7 +34,7 @@
                             <label for="studentGroup">Группа</label>
                             <input type="text" class="form-control" id="studentGroup">
                         </div>
-                        <button type="submit" class="btn btn-primary">Записать</button>
+                        <button v-on:click type="button" class="btn btn-primary">Записать</button>
                     </form>
                 </div>
             </div>
@@ -71,9 +71,14 @@
                 <button type="button" class="btn btn-danger">Удалить</button>
             </div>
         </div>
+        <div class="test">
+            <input v-model="name1" type="text" name="" id="">
+            <button v-on:click="greet" type="submit">Кнопка</button>
+            <p v-for="arr in array"></p>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="/Vue/app.js"></script>
+    <script src="Vue/app.js"></script>
 </body>
 
 </html>
